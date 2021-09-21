@@ -55,6 +55,6 @@ againBtn.addEventListener('click', function again() {
     myInput.value = "";
     message.textContent = "Start guessing...";
     document.querySelector('body').style.backgroundColor = "#222";
-    unkNumber.textContent = "?"
+    unkNumber.textContent = "?";
 
 })
