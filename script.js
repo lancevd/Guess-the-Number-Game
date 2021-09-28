@@ -31,8 +31,8 @@ check.addEventListener('click', function checked() {
         };
     } else if ( newNum > 20 || newNum < 1) {
         alert ('Please enter a number between 1 and 20')
-    } else if (newNum != ranNum) {
-        message.textContent = 'Wrong! Try again!'
+    } else if (newNum < ranNum) {
+        message.textContent = 'Number is higher than that!'
         newScore--;
         console.log(newScore)
         currentScore.textContent = newScore
@@ -41,7 +41,16 @@ check.addEventListener('click', function checked() {
             message.textContent = "Game Over Start again!";
         };
         
-    } else {
+    } else if (newNum > ranNum ) {
+        message.textContent = 'Number is lower than that!'
+        newScore--;
+        console.log(newScore)
+        currentScore.textContent = newScore
+        if (newScore === 0 || newScore < 0){
+            currentScore.textContent = "0";
+            message.textContent = "Game Over Start again!";
+        };
+    }  else {
         alert('Please enter a number!');
     }
 
