@@ -39,6 +39,7 @@ check.addEventListener('click', function checked() {
         if (newScore === 0 || newScore < 0){
             currentScore.textContent = "0";
             message.textContent = "Game Over Start again!";
+            document.querySelector('body').style.backgroundColor = "red";
         };
         
     } else if (newNum > ranNum ) {
@@ -49,6 +50,7 @@ check.addEventListener('click', function checked() {
         if (newScore === 0 || newScore < 0){
             currentScore.textContent = "0";
             message.textContent = "Game Over Start again!";
+            document.querySelector('body').style.backgroundColor = "red";
         };
     }  else {
         alert('Please enter a number!');
