@@ -9,12 +9,12 @@ let currentScore = document.querySelector('.score');
 let highScore = document.querySelector('.highscore');
 let newScore = Number(currentScore.textContent);
 let newHighScore = Number(highScore.textContent);
-console.log( `High Score is ${newHighScore}`);
+// console.log( `High Score is ${newHighScore}`);
 
 
 // Generating a random number
 let ranNum = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-console.log(ranNum);
+// console.log(ranNum);
 
 // getting input
 
@@ -34,7 +34,7 @@ check.addEventListener('click', function checked() {
     } else if (newNum < ranNum) {
         message.textContent = 'Number is higher than that!'
         newScore--;
-        console.log(newScore)
+        // console.log(newScore)
         currentScore.textContent = newScore
         if (newScore === 0 || newScore < 0){
             currentScore.textContent = "0";
